@@ -1,9 +1,17 @@
 <html>
     game!
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
 
     <script>
+        var canvas
+        var canvasContext
+        var fillcolor = '#000'//"black"
         window.onload = ()=>{
-                console.log("hello wold")
+                console.log("The window is loaded!")
+                canvas = document.getElementById('gameCanvas')
+                canvasContext = canvas.getContext('2d')
+                canvasContext.fillStyle = fillcolor
+                canvasContext.fillRect(0,0,canvas.width,canvas.height)
             }
     </script>
 </html>
