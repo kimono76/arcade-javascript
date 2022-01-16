@@ -1,4 +1,8 @@
 <html>
+<head>
+    <title>Game</title>
+</head>
+<body>
     game!
     <canvas id="gameCanvas" width="800" height="600"></canvas>
 
@@ -13,12 +17,10 @@
         
             canvas = document.getElementById('gameCanvas')
             canvasContext = canvas.getContext('2d')
-            drawEverything()
-            drawEverything()
-            drawEverything()
+            setInterval(drawEverything, 50);
         }
         var drawEverything=()=>{ 
-            ballX += 20
+            ballX +=5
 
             console.log(ballX)
 
@@ -29,8 +31,9 @@
             canvasContext.fillRect(225, 210, 200, 200)
 
             canvasContext.fillStyle = 'red'
-            canvasContext.fillRect(ballX, 200, 50, 25)
+            canvasContext.fillRect(ballX, 100, 10, 10)
         }
 
     </script>
+</body>
 </html>
